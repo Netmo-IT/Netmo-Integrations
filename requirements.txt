@@ -1,3 +1,5 @@
 requests
 logging
 azure-functions
+azure-identity
+azure-keyvault-secrets

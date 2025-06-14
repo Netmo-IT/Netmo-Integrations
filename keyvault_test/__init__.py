@@ -2,6 +2,8 @@ import os
 import logging
 from typing import Optional
 import azure.functions as func
+from azure.identity import DefaultAzureCredential
+
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("Key Vault test function triggered")
