@@ -5,7 +5,6 @@ import azure.functions as func
 from azure.identity import DefaultAzureCredential
 from azure.keyvault.secrets import SecretClient
 
-
 import logging
 import os
 import azure.functions as func
