@@ -11,6 +11,14 @@ import os
 import azure.functions as func
 from azure.identity import DefaultAzureCredential
 from azure.keyvault.secrets import SecretClient
+import warnings
+warnings.filterwarnings(
+    "ignore", 
+    message=".*urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL.*'",
+    category=UserWarning,
+    module="urllib3"
+)
+
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("Key Vault test function triggered")
